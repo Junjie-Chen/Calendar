@@ -1,0 +1,71 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "A digital calendar on the web to create events of your own",
+  "main": "index.js",
+  "scripts": {
+    "build-client": "webpack -w",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "start-dev": "NODE_ENV='development' npm run build-client & npm run start-server",
+    "start": "node server",
+    "seed": "node script/seed.js",
+    "deploy": "script/deploy",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junjie-Chen/Calendar.git"
+  },
+  "keywords": [],
+  "author": "Junjie Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junjie-Chen/Calendar/issues"
+  },
+  "homepage": "https://github.com/Junjie-Chen/Calendar#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "history": "^4.7.2",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "pg": "^6.4.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^4.37.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/polyfill": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.46",
+    "@babel/preset-stage-2": "^7.0.0-beta.46",
+    "autoprefixer": "^8.6.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0-beta.2",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-fullstack": "^5.0.0",
+    "eslint-plugin-react": "^7.8.2",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^2.1.5",
+    "redux-devtools-extension": "^2.13.2",
+    "sass-loader": "^7.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^3.0.8"
+  }
+}
